@@ -17,13 +17,13 @@ public class PAPI extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier(){
-        return "borsa"; //example
+        return "borsa"; 
     }
 
     @Override
     public String onRequest(OfflinePlayer player, String identifier) {
 
-        // %example_placeholder1%
+        // %borsa_durum%
         if(identifier.equals("durum")){
             try {
                 return Main.getInstance().usd;
@@ -32,8 +32,6 @@ public class PAPI extends PlaceholderExpansion {
             }
         }
 
-        // We return null if an invalid placeholder (f.e. %example_placeholder3%)
-        // was provided
         return "6.40";
     }
 
